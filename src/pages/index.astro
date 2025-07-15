@@ -1,6 +1,8 @@
 ---
 import App from '../components/App.vue';
 import PostList from '../components/PostList.vue';
+import MocolonBot from '../components/MocolonBot.vue';
+import Weather from '../components/Weather.vue';
 ---
 
 <!DOCTYPE html>
@@ -10,10 +12,11 @@ import PostList from '../components/PostList.vue';
     <title>Astro + Vue + WordPress</title>
   </head>
   <body>
-    <h1>Astro + Vue + WordPress</h1>
 
     <!-- 自己紹介などのVue -->
     <App client:only="vue" />
+	<MocolonBot client:load />
+	<Weather client:load />
 
     <!-- WordPressの一覧 -->
     <PostList client:only="vue" />
